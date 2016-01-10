@@ -3,8 +3,8 @@ body {
 }
 
 button {
-	display: inline;
-	background-color: blue; 
+	display: inline-block;
+	width: 105px; 
 }
 
 .title {
@@ -15,6 +15,45 @@ button {
 }
 
 .players {
-	margin-top: 10%; 
+	margin-top: 15%; 
 }
+
+.intro-btn{
+	transition:all .03s linear;
+    position:relative;
+    outline:medium none;
+    -moz-outline-style:none;
+    border:0px;
+}
+
+.intro-btn:focus{
+	outline:medium none;
+    -moz-outline-style:none;
+}
+
+.intro-btn:active{
+	top: 3px; 
+}
+
+.divider{
+	display: inline-block;
+	height: auto; 
+	width: 8%; 
+}
+
+ .btn-success {
+    box-shadow:0 0 0 1px #5cb85c inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 4px 0 0 #4cae4c, 0 4px 0 1px rgba(0,0,0,0.4), 0 4px 4px 1px rgba(0,0,0,0.5);
+    background-color:#5cb85c;
+}
+
+.btn-primary {
+    box-shadow:0 0 0 1px #428bca inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 4px 0 0 #357ebd, 0 4px 0 1px rgba(0,0,0,0.4), 0 4px 4px 1px rgba(0,0,0,0.5);
+    background-color:#428bca;
+}
+
+.btn-danger {
+    box-shadow:0 0 0 1px #c63702 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 4px 0 0 #C24032, 0 4px 0 1px rgba(0,0,0,0.4), 0 4px 4px 1px rgba(0,0,0,0.5);
+    background-color:#c63702;
+}
+
 
