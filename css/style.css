@@ -14,11 +14,18 @@ button {
 	font-weight: bold;  
 }
 
+.secondtlt{
+	font-family: 'Actor'; 
+	margin-top: 1%; 
+	font-size: 30px; 
+	font-weight: bold;
+}
+
 .players {
 	margin-top: 15%; 
 }
 
-.intro-btn{
+.mybtn{
 	transition:all .03s linear;
     position:relative;
     outline:medium none;
@@ -26,12 +33,12 @@ button {
     border:0px;
 }
 
-.intro-btn:focus{
+.mybtn:focus{
 	outline:medium none;
     -moz-outline-style:none;
 }
 
-.intro-btn:active{
+.mybtn:active{
 	top: 3px; 
 }
 
@@ -56,4 +63,7 @@ button {
     background-color:#c63702;
 }
 
+.start {
+	margin-top: 15%; 
+}
 
