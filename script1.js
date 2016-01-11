@@ -5,7 +5,7 @@ var countdown = function(count){
 	}
 	setTimeout(function(){
 		countdown(count-1);  
-	}, 550); 
+	}, 510); 
 	$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">'+count+'</div>'); 
 	$('.temp').delay(300).fadeOut(200); 
 } 
@@ -38,10 +38,9 @@ var two = function(){
 	}, 500); 
 }
 
-//beginnig function
+//Main function getting all inputs/calling the functions
 var main = function(){
 	var choice = 0; 
-	$('.start').fadeOut(0);
 	$('.one').click(function(){
 		one(); 
 		choice = 1; 
@@ -53,6 +52,11 @@ var main = function(){
 	$('.start').click(function(){
 		game(); 
 	}); 
+	/*
+	Now the idea is the have a button is clicked
+	when player presses the assigned keystroke.
+	The Timer (10 sec) is below the div/section containing the 
+	*/ 
 }
 
 $(document).ready(main); 
