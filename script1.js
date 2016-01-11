@@ -5,7 +5,7 @@ var countdown = function(count){
 	}
 	setTimeout(function(){
 		countdown(count-1);  
-	}, 600); 
+	}, 550); 
 	$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">'+count+'</div>'); 
 	$('.temp').delay(300).fadeOut(200); 
 } 
@@ -14,8 +14,10 @@ var countdown = function(count){
 var game = function(){
 	$('.start').fadeOut(0); 
 	countdown(3);
-	$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
-	$('.temp').delay(100).fadeOut(300); 
+	setTimeout(function(){
+		$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
+		$('.temp').delay(100).fadeOut(300);
+	}, 1700);  
 }
 
 //Set up of start button + title solo mode
