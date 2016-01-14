@@ -1,19 +1,19 @@
 //Displays countdown + start
-var countdown = function(count){
+var countdown = function(count,location){
 	if (count === 0) {
 		return; 
 	}
 	setTimeout(function(){
-		countdown(count-1);  
-	}, 510); 
-	$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">'+count+'</div>'); 
+		countdown(count-1,location);  
+	}, 520); 
+	location.append('<br class="temp"><br class="temp"><div class="temp">'+count+'</div>'); 
 	$('.temp').delay(300).fadeOut(200); 
 } 
 
 //manages calls to countdown when starting
 var game = function(){
 	$('.start').fadeOut(0); 
-	countdown(3);
+	countdown(3,$('.secondtlt'));
 	setTimeout(function(){
 		$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
 		$('.temp').delay(100).fadeOut(300);
@@ -51,7 +51,7 @@ var main = function(){
 	});
 	$('.start').click(function(){
 		game(); 
-	}); 
+	});
 	/*
 	Now the idea is the have a button is clicked
 	when player presses the assigned keystroke.
