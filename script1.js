@@ -21,14 +21,15 @@ var game = function(choice){
 	setTimeout(function(){
 		$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
 		$('.temp').delay(100).fadeOut(300);
-		// if (choice === 1){
-		// 	solo();		
-		// }
-		// if (choice === 2){
-		// 	versus(); 
-		// }
-	}, 1900);  
-
+	}, 1900);
+	setTimeout(function(){
+		if (choice === 1){
+			solo(); 
+		}
+		if (choice === 2){
+			versus(); 
+		}
+	}, 2050);   
 }
 
 //Set up of start button + title solo mode
@@ -63,11 +64,6 @@ var main = function(){
 	$('.start').click(function(){
 		game(choice); 
 	});
-		/*
-	Now the idea is the have a button is clicked
-	when player presses the assigned keystroke.
-	The Timer (10 sec) is below the div/section containing the 
-	*/ 
 }
 
 $(document).ready(main); 
