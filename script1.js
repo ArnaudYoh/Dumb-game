@@ -1,5 +1,25 @@
+//handles the solo version
 var solo = function(){
-
+	count = 0; 
+	$('.solo').fadeIn(300); 
+	$(window).keydown(function(e){
+		if(e.keyCode === 0 || e.keyCode === 32){
+			$('.toclick').addClass(" active ");
+			count = count +1;
+		}
+	}); 
+	$(window).keyup(function(e){
+		if(e.keyCode === 0 || e.keyCode === 32){
+			$('.toclick').removeClass(" active ");
+		}
+	}); 
+	countdown(10,$('.solo'),1000); 
+	setTimeout(function(){
+		$('.solo').fadeOut(200); 
+		setTimeout(function(){
+			$('.secondtlt').append('<p class="result">Congratulation !!! <br> you pressed the spacebar '+count+' times !!'); 
+		},230); 
+	},10100); 
 }
 
 //Displays countdown + start
@@ -20,7 +40,7 @@ var game = function(choice){
 	countdown(3,$('.secondtlt'),600);
 	setTimeout(function(){
 		$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
-		$('.temp').delay(100).fadeOut(300);
+		$('.temp').delay(100).fadeOut(200);
 	}, 1900);
 	setTimeout(function(){
 		if (choice === 1){
@@ -29,7 +49,7 @@ var game = function(choice){
 		if (choice === 2){
 			versus(); 
 		}
-	}, 2050);   
+	}, 2250);   
 }
 
 //Set up of start button + title solo mode

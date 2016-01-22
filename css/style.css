@@ -21,6 +21,13 @@ button {
 	font-weight: bold;
 }
 
+.temp {
+	font-family: 'Actor'; 
+	margin-top: 1%; 
+	font-size: 25px; 
+	font-weight: bold;	
+}
+
 .players {
 	margin-top: 17%; 
 }
@@ -40,6 +47,10 @@ button {
 
 .mybtn:active{
 	top: 3px; 
+}
+
+.active{
+	top: 3px;
 }
 
 .divider{
@@ -68,9 +79,23 @@ button {
 	display: none;
 }
 
-.solo {
+.myhidden {
 	display: none; 
-	margin-top: 10%; 
+}
+
+.solo { 
+	margin-top: 15%; 
 	margin-bottom: 2%; 
+}
+
+.solo p {
+	font-family: 'Actor'; 
+	margin-bottom: 3%; 
+	font-size: 25px; 
+	font-weight: 600; 
+}
+
+.result {
+	margin-top: 10%; 
 }
 
