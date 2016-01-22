@@ -68,11 +68,8 @@ button {
 	display: none;
 }
 
-.hidden {
-	display: none;
-}
-
 .solo {
+	display: none; 
 	margin-top: 10%; 
 	margin-bottom: 2%; 
 }

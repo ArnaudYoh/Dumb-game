@@ -1,23 +1,34 @@
+var solo = function(){
+
+}
+
 //Displays countdown + start
-var countdown = function(count,location){
+var countdown = function(count,location,time){
 	if (count === 0) {
 		return; 
 	}
 	setTimeout(function(){
-		countdown(count-1,location);  
-	}, 520); 
+		countdown(count-1,location,time);  
+	}, time+30); 
 	location.append('<br class="temp"><br class="temp"><div class="temp">'+count+'</div>'); 
-	$('.temp').delay(300).fadeOut(200); 
+	$('.temp').delay(time/2-100).fadeOut(time/2+100); 
 } 
 
 //manages calls to countdown when starting
-var game = function(){
+var game = function(choice){
 	$('.start').fadeOut(0); 
-	countdown(3,$('.secondtlt'));
+	countdown(3,$('.secondtlt'),600);
 	setTimeout(function(){
 		$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
 		$('.temp').delay(100).fadeOut(300);
-	}, 1700);  
+		// if (choice === 1){
+		// 	solo();		
+		// }
+		// if (choice === 2){
+		// 	versus(); 
+		// }
+	}, 1900);  
+
 }
 
 //Set up of start button + title solo mode
@@ -50,12 +61,9 @@ var main = function(){
 		choice = 2; 
 	});
 	$('.start').click(function(){
-		game(); 
+		game(choice); 
 	});
-	if (choice===1) {
-		$('.solo').removeClass()
-	};
-	/*
+		/*
 	Now the idea is the have a button is clicked
 	when player presses the assigned keystroke.
 	The Timer (10 sec) is below the div/section containing the 
