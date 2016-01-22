@@ -52,6 +52,9 @@ var main = function(){
 	$('.start').click(function(){
 		game(); 
 	});
+	if (choice===1) {
+		$('.solo').removeClass()
+	};
 	/*
 	Now the idea is the have a button is clicked
 	when player presses the assigned keystroke.
