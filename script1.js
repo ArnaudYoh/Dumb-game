@@ -17,7 +17,7 @@ var solo = function(){
 	setTimeout(function(){
 		$('.solo').fadeOut(200); 
 		setTimeout(function(){
-			$('.secondtlt').append('<p class="result">Congratulation !!! <br> you pressed the spacebar '+count+' times !!'); 
+			$('.secondtlt').append('<p class="result">Congratulation !!! <br> you pressed the spacebar '+count+' times !! <br> <br> Now please do something more useful with your time'); 
 		},230); 
 	},10100); 
 }
