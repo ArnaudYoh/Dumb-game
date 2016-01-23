@@ -1,24 +1,33 @@
 //handles the solo version
 var solo = function(){
-	count = 0; 
+	count = 0;
+	pseudolock = 1;  
 	$('.solo').fadeIn(300); 
 	$(window).keydown(function(e){
 		if(e.keyCode === 0 || e.keyCode === 32){
 			$('.toclick').addClass(" active ");
-			count = count +1;
+			if (pseudolock === 1){
+				pseudolock = 0; 
+				count = count +1;
+			}
 		}
 	}); 
 	$(window).keyup(function(e){
 		if(e.keyCode === 0 || e.keyCode === 32){
 			$('.toclick').removeClass(" active ");
+			pseudolock = 1; 
 		}
-	}); 
+	});
 	countdown(10,$('.solo'),1000); 
 	setTimeout(function(){
 		$('.solo').fadeOut(200); 
 		setTimeout(function(){
-			$('.secondtlt').append('<p class="result">Congratulation !!! <br> you pressed the spacebar '+count+' times !! <br> <br> Now please do something more useful with your time'); 
-		},230); 
+			$('.secondtlt').append('<p class="result">STOP!</p>'); 
+			$('.result').delay(200).fadeOut(150); 
+			setTimeout(function(){
+				$('.secondtlt').append('<p class="result">Congratulation !!! <br> you pressed the spacebar '+count+' times !! <br> <br> Now please do something more useful with your time'); 
+			},400);
+		},220); 
 	},10100); 
 }
 
