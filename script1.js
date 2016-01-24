@@ -31,6 +31,68 @@ var solo = function(){
 	},10100); 
 }
 
+var versus = function(){
+	count1 = 0;
+	count2 = 0; 
+	pseudolock1 = 1;
+	pseudolock2 = 1;  
+	$('.versus').fadeIn(300); 
+	
+	//player 2 key "S"
+	$(window).keydown(function(e){
+		if(e.keyCode === 83){
+			$('.toclick1').addClass(" active ");
+			if (pseudolock1 === 1){
+				pseudolock1 = 0; 
+				count1 = count1 +1;
+			}
+		}
+	}); 
+	$(window).keyup(function(e){
+		if(e.keyCode === 83){
+			$('.toclick1').removeClass(" active ");
+			pseudolock1 = 1; 
+		}
+	});
+
+	//player 2 key "L"
+	$(window).keydown(function(e){
+		if(e.keyCode === 76){
+			$('.toclick2').addClass(" active ");
+			if (pseudolock2 === 1){
+				pseudolock2 = 0; 
+				count2 = count2 +1;
+			}
+		}
+	}); 
+	$(window).keyup(function(e){
+		if(e.keyCode === 76){
+			$('.toclick2').removeClass(" active ");
+			pseudolock2 = 1; 
+		}
+	});
+
+	countdown(10,$('.versus'),1000); 
+	setTimeout(function(){
+		$('.versus').fadeOut(200); 
+		setTimeout(function(){
+			$('.secondtlt').append('<p class="result">STOP!</p>'); 
+			$('.result').delay(200).fadeOut(150); 
+			setTimeout(function(){
+				if(count1 > count2){
+					$('.secondtlt').append('<p class="result"> <br>Player 1, you pressed the spacebar '+count1+' times !! <br> YOU WON <br> <br>Player 2 go do something else, nobody likes you'); 
+				}
+				else if (count1 < count2 ) {
+					$('.secondtlt').append('<p class="result"> <br>Player 2, you pressed the spacebar '+count2+' times !! <br> YOU WON <br> <br>Player 1 go do something else, nobody likes you');
+				}
+				else {
+					$('.secondtlt').append('<p class="result"> <br>Player 1 and 2, you pressed the spacebar '+count1+' times !! <br> DRAW <br> <br>Well it was very unlikely to happen, give yourselves a hug');	
+				}
+				},400);
+		},220); 
+	},10100); 
+}
+
 //Displays countdown + start
 var countdown = function(count,location,time){
 	if (count === 0) {

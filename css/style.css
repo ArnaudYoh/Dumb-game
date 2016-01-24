@@ -87,8 +87,9 @@ button {
 	margin-top: 10%;  
 }
 
-.solo p {
+p {
 	font-family: 'Actor'; 
+	margin-top: 10%; 
 	margin-bottom: 3%; 
 	font-size: 25px; 
 	font-weight: 600; 
