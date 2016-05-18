@@ -1,4 +1,8 @@
-//handles the solo version
+// Program handling the user interaction //
+// TODO : try to have a bit more modularity especially in the keypressing during the game // 
+
+
+// handles the solo version
 var solo = function(){
 	count = 0;
 	pseudolock = 1;  
@@ -31,6 +35,7 @@ var solo = function(){
 	},10100); 
 }
 
+// handles the versus version
 var versus = function(){
 	count1 = 0;
 	count2 = 0; 
@@ -38,7 +43,7 @@ var versus = function(){
 	pseudolock2 = 1;  
 	$('.versus').fadeIn(300); 
 	
-	//player 2 key "S"
+	//player 2 key "S" animation
 	$(window).keydown(function(e){
 		if(e.keyCode === 83){
 			$('.toclick1').addClass(" active ");
@@ -55,7 +60,7 @@ var versus = function(){
 		}
 	});
 
-	//player 2 key "L"
+	//player 2 key "L" animation 
 	$(window).keydown(function(e){
 		if(e.keyCode === 76){
 			$('.toclick2').addClass(" active ");
@@ -72,6 +77,7 @@ var versus = function(){
 		}
 	});
 
+	// Game Countdown + ending message of the game (this is badly coded)
 	countdown(10,$('.versus'),1000); 
 	setTimeout(function(){
 		$('.versus').fadeOut(200); 
@@ -93,7 +99,7 @@ var versus = function(){
 	},10100); 
 }
 
-//Displays countdown + start
+//Displays starting countdown + start
 var countdown = function(count,location,time){
 	if (count === 0) {
 		return; 
@@ -141,7 +147,7 @@ var two = function(){
 	}, 500); 
 }
 
-//Main function getting all inputs/calling the functions
+// Main menu 
 var main = function(){
 	var choice = 0; 
 	$('.one').click(function(){
