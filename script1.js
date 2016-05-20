@@ -107,7 +107,7 @@ var countdown = function(count,location,time){
 	setTimeout(function(){
 		countdown(count-1,location,time);  
 	}, time+30); 
-	location.append('<br class="temp"><br class="temp"><div class="temp">'+count+'</div>'); 
+	location.append('<div class="temp">'+count+'</div>'); 
 	$('.temp').delay(time/2-100).fadeOut(time/2+100); 
 } 
 
