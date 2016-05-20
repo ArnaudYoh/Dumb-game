@@ -116,7 +116,7 @@ var game = function(choice){
 	$('.start').fadeOut(0); 
 	countdown(3,$('.secondtlt'),600);
 	setTimeout(function(){
-		$('.secondtlt').append('<br class="temp"><br class="temp"><div class="temp">Start !</div>'); 
+		$('.secondtlt').append('<div class="temp">Start !</div>'); 
 		$('.temp').delay(100).fadeOut(200);
 	}, 1900);
 	setTimeout(function(){
