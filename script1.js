@@ -98,7 +98,7 @@ var versus = function(){
 		},220); 
 	},10100); 
 }
- sdqvuiyxfsvkjuxijdfgnu
+
 //Displays starting countdown + start
 var countdown = function(count,location,time){
 	if (count === 0) {
