@@ -89,7 +89,7 @@ var versus = function(){
 					$('.secondtlt').append('<p class="result"> <br>Player 1, you pressed the S button '+count1+' times !! <br> YOU WON <br> <br>Player 2 go do something else, nobody likes you </p>'); 
 				}
 				else if (count1 < count2 ) {
-					$('.secondtlt').append('<p class="result"> <br>Player 2, you pressed the spacebar '+count2+' times !! <br> YOU WON <br> <br>Player 1 go do something else, nobody likes you </p>');
+					$('.secondtlt').append('<p class="result"> <br>Player 2, you pressed the L button '+count2+' times !! <br> YOU WON <br> <br>Player 1 go do something else, nobody likes you </p>');
 				}
 				else {
 					$('.secondtlt').append('<p class="result"> <br>Player 1 and 2, you pressed the spacebar '+count1+' times !! <br> DRAW <br> <br>Well it was very unlikely to happen, give yourselves a hug </p>');	
